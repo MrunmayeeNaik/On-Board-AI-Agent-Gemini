@@ -1,0 +1,6 @@
+{
+  "Engineering": ["GitHub", "Jira", "AWS", "VS Code", "Confluence", "Slack"],
+  "Marketing": ["HubSpot", "Canva", "Google Analytics", "Notion", "Slack"],
+  "Sales": ["Salesforce", "LinkedIn Sales Navigator", "Zoom", "Slack"],
+  "HR": ["Workday", "Greenhouse", "Slack", "Google Workspace"]
+}

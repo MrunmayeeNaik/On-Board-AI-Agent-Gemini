@@ -1,0 +1,22 @@
+{
+  "Engineering": {
+    "head": "Rajesh Kumar",
+    "email": "rajesh@company.com",
+    "team_size": 12
+  },
+  "Marketing": {
+    "head": "Priya Shah",
+    "email": "priya@company.com",
+    "team_size": 6
+  },
+  "Sales": {
+    "head": "Amit Verma",
+    "email": "amit@company.com",
+    "team_size": 8
+  },
+  "HR": {
+    "head": "Sneha Joshi",
+    "email": "sneha@company.com",
+    "team_size": 4
+  }
+}

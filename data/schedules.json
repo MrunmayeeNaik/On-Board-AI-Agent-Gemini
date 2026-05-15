@@ -1,0 +1,42 @@
+{
+  "Engineering": {
+    "09:00": "Laptop setup + system access with IT team",
+    "10:00": "Meet your manager and team standup",
+    "11:00": "GitHub and Jira orientation",
+    "12:00": "Lunch with the team",
+    "13:00": "Codebase walkthrough with senior engineer",
+    "15:00": "HR policy and benefits session",
+    "16:00": "Set up local dev environment",
+    "17:00": "End of day check-in with manager"
+  },
+  "Marketing": {
+    "09:00": "Laptop setup with IT team",
+    "10:00": "Meet your manager",
+    "11:00": "Brand guidelines and tools walkthrough",
+    "12:00": "Lunch with the team",
+    "13:00": "HubSpot and analytics tools setup",
+    "15:00": "HR policy and benefits session",
+    "16:00": "Review current campaigns",
+    "17:00": "End of day check-in with manager"
+  },
+  "Sales": {
+    "09:00": "Laptop setup with IT team",
+    "10:00": "Meet your manager",
+    "11:00": "Salesforce CRM orientation",
+    "12:00": "Lunch with the team",
+    "13:00": "Sales playbook and process walkthrough",
+    "15:00": "HR policy and benefits session",
+    "16:00": "Shadow a senior sales call",
+    "17:00": "End of day check-in with manager"
+  },
+  "HR": {
+    "09:00": "Laptop setup with IT team",
+    "10:00": "Meet your manager",
+    "11:00": "HR systems and tools walkthrough",
+    "12:00": "Lunch with the team",
+    "13:00": "Workday and Greenhouse orientation",
+    "15:00": "Compliance and policy deep dive",
+    "16:00": "Meet key stakeholders",
+    "17:00": "End of day check-in with manager"
+  }
+}
