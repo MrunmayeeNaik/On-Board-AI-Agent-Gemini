@@ -15,7 +15,7 @@ def call_gemini(prompt: str, context: str = "") -> str:
     client = get_gemini_client()
     full_prompt = f"{context}\n\n{prompt}" if context else prompt
     response = client.models.generate_content(
-        model="gemini-2.0-flash",
+        model="gemini-3.1-flash-lite-preview",
         contents=full_prompt
     )
     return response.text
