@@ -1,6 +1,7 @@
 import streamlit as st
 
 def render_tab3(chat_function):
+    """Render the HR Buddy chat tab, routing user messages through the supplied chat_function(question, history_text) callback."""
     st.header("💬 Ask HR Anything")
     st.caption("Your AI-powered HR assistant — available 24/7")
 

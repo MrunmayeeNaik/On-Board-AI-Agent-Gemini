@@ -4,6 +4,7 @@ from utils.prompt_templates import agent1_prompt
 import json
 
 def run_agent1(name: str, role: str, department: str) -> str:
+    """Run the Provisioning Coordinator: look up tools, org, and schedule from JSON, then have Gemini render the onboarding narrative."""
     # Load data from JSON files
     tools = load_tools(department)
     org = load_org_chart(department)

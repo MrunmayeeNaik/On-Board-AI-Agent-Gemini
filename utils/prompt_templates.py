@@ -1,4 +1,5 @@
 def agent1_prompt(name: str, role: str, department: str, tools: list) -> str:
+    """Build the Provisioning Coordinator prompt that asks Gemini for a tool checklist, Day-1 schedule, and key contacts."""
     return f"""
 You are an enterprise onboarding provisioning agent.
 
@@ -24,6 +25,7 @@ Be specific, professional, and friendly. Format clearly.
 """
 
 def agent2_prompt(name: str, role: str, department: str, agent1_output: str) -> str:
+    """Build the Learning Path Generator prompt that asks Gemini for a 30-60-90 day plan grounded in Agent 1's provisioning output."""
     return f"""
 You are an enterprise learning path generator agent.
 
@@ -52,6 +54,7 @@ Be specific to their role and department. Format as a clear structured plan.
 """
 
 def agent3_prompt(question: str, chat_history: str = "") -> str:
+    """Build the HR Buddy prompt that grounds Gemini in company policy and prior chat history to answer the employee's question."""
     return f"""
 You are a friendly and knowledgeable HR assistant agent for an enterprise company.
 

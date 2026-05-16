@@ -4,7 +4,7 @@ from utils.prompt_templates import agent2_prompt
 import os
 
 def run_agent2(name: str, role: str, department: str, agent1_output: str) -> str:
-    
+    """Run the Learning Path Generator: load handbook context and Agent 1's output, then ask Gemini for a 30-60-90 day plan."""
     # Load company handbook if exists
     handbook_path = os.path.join("data", "company_handbook.pdf")
     handbook_text = ""

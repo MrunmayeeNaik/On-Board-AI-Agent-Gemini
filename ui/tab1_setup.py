@@ -1,6 +1,7 @@
 import streamlit as st
 
 def render_tab1():
+    """Render the Employee Setup tab and return (name, role, department, generate_button_clicked)."""
     st.header("🔧 Employee Setup")
     st.caption("Fill in the new employee details to generate their onboarding plan")
 
