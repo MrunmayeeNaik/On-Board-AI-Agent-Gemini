@@ -26,14 +26,14 @@ def run_agent1(name: str, role: str, department: str) -> str:
     
     # Add org and schedule context
     context = f"""
-Company Context:
-- Department Head: {org.get('head', 'TBD')}
-- Department Head Email: {org.get('email', 'TBD')}
-- Team Size: {org.get('team_size', 'TBD')} people
+                Company Context:
+                - Department Head: {org.get('head', 'TBD')}
+                - Department Head Email: {org.get('email', 'TBD')}
+                - Team Size: {org.get('team_size', 'TBD')} people
 
-Day 1 Schedule:
-{json.dumps(schedule, indent=2)}
-"""
+                Day 1 Schedule:
+                {json.dumps(schedule, indent=2)}
+            """
     
     # Call Gemini
     output = call_gemini(prompt=prompt, context=context)

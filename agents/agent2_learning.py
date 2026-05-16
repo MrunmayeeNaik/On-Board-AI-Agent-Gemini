@@ -12,17 +12,17 @@ def run_agent2(name: str, role: str, department: str, agent1_output: str) -> str
     if os.path.exists(handbook_path):
         handbook_text = load_pdf(handbook_path)
         handbook_context = f"""
-Company Handbook Content:
-{handbook_text[:3000]}
-"""
+                            Company Handbook Content:
+                            {handbook_text[:3000]}
+                            """
     else:
         handbook_context = """
-Company Handbook:
-- Annual learning budget: ₹50,000
-- Udemy and Coursera access provided
-- Quarterly performance reviews
-- 360 degree feedback annually
-"""
+                            Company Handbook:
+                            - Annual learning budget: ₹50,000
+                            - Udemy and Coursera access provided
+                            - Quarterly performance reviews
+                            - 360 degree feedback annually
+                            """
 
     # Build prompt
     prompt = agent2_prompt(
@@ -34,11 +34,11 @@ Company Handbook:
 
     # Combine handbook context with agent1 output
     context = f"""
-{handbook_context}
+                {handbook_context}
 
-Agent 1 Provisioning Output:
-{agent1_output}
-"""
+                Agent 1 Provisioning Output:
+                {agent1_output}
+                """
 
     # Call Gemini
     output = call_gemini(prompt=prompt, context=context)
