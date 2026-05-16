@@ -1,0 +1,50 @@
+{
+  "profile": {
+    "name": "Karan Naik",
+    "role": "AI ML Engineer",
+    "department": "Engineering"
+  },
+  "agent1_output": {
+    "summary_md": "## Welcome\nWelcome to the team, Karan Naik! We are thrilled to have you join our Engineering department as an AI ML Engineer, and we look forward to the expertise you will bring to our projects. We are committed to ensuring you have everything you need to hit the ground running.\n\n## Tool Provisioning\n\n### Auto Provisioned\n- [ ] Slack \u2014 Official team communication and collaboration platform.\n- [ ] Confluence \u2014 Knowledge base for documentation and project specs.\n- [ ] Jira \u2014 Project management and issue tracking tool.\n\n### Pending Manager Approval\n- [ ] GitHub \u2014 Repository access for code versioning and pull requests.\n- [ ] AWS \u2014 Cloud infrastructure access for training and deploying machine learning models.\n\n### Requires IT Setup\n- [ ] VS Code \u2014 Primary integrated development environment for local coding and debugging.\n\n## Day 1 Schedule\n- [ ] 09:00 \u2014 Laptop setup + system access with IT team\n- [ ] 10:00 \u2014 Meet your manager and team standup\n- [ ] 11:00 \u2014 GitHub and Jira orientation\n- [ ] 12:00 \u2014 Lunch with the team\n- [ ] 13:00 \u2014 Codebase walkthrough with senior engineer\n- [ ] 15:00 \u2014 HR policy and benefits session\n- [ ] 16:00 \u2014 Set up local dev environment\n- [ ] 17:00 \u2014 End of day check-in with manager\n\n## Key Contacts (Week 1)\n- [ ] Rajesh Kumar, Department Head (rajesh@company.com) \u2014 Provides high-level guidance and alignment on engineering goals.\n- [ ] Senior Engineer, Technical Mentor \u2014 Your point of contact for deep-dives into our codebase and architectural standards.\n- [ ] IT Support Lead, Infrastructure Team \u2014 Assists with hardware requirements and advanced environment troubleshooting.\n- [ ] HR Representative, Onboarding Specialist \u2014 Your contact for any questions regarding company policies, benefits, and administrative needs.\n- [ ] Team Lead, Engineering Team \u2014 Coordinates daily standups and assigns initial tasks for your first sprint."
+  },
+  "agent2_output": {
+    "summary_md": "## 30-Day Plan \u2014 Ramp Up\n\n- [ ] Complete onboarding documentation on Confluence to understand the current AI/ML roadmap and project architecture.\n- [ ] Configure local VS Code environment and pull the primary repository once GitHub access is granted.\n- [ ] Shadow the Senior Engineer during two model training sessions on AWS to learn internal deployment pipelines.\n- [ ] Schedule 1:1 meetings with each member of the engineering team to understand their specific roles and current technical challenges.\n- [ ] Attend the internal HR session (15:00 on Day 1) to understand how to leverage your \u20b950,000 annual learning budget.\n- [ ] Complete your first \"good first issue\" in Jira to understand the end-to-end pull request and CI/CD workflow.\n\n## 60-Day Plan \u2014 First Ownership\n\n- [ ] Take full ownership of a minor feature or bug fix within the current ML model codebase.\n- [ ] Document a technical \"lessons learned\" or \"how-to\" guide on Confluence regarding a specific model optimization task you performed.\n- [ ] Host a brief knowledge-sharing session for the team on a recent AI research paper or library relevant to your current project.\n- [ ] Initiate a 1:1 feedback loop with your manager to align on performance goals ahead of the quarterly review cycle.\n- [ ] Successfully deploy a small-scale model update to the staging environment using AWS.\n\n## 90-Day Plan \u2014 Full Contribution\n\n- [ ] Deliver a project milestone independently, meeting all defined Jira acceptance criteria and architectural standards.\n- [ ] Optimize an existing model training or inference pipeline resulting in at least a 10% improvement in latency or cost efficiency.\n- [ ] Participate in the 360-degree feedback process, providing constructive peer reviews to colleagues while integrating their feedback into your growth plan.\n- [ ] Propose and initiate one technical improvement project for the team\u2019s infrastructure or testing framework.\n\n## Recommended Resources\n\n- [ ] **AWS Certified Machine Learning \u2013 Specialty (Coursera/Udemy)** \u2014 Essential for mastering the specific cloud environment utilized by the team.\n- [ ] **Internal Engineering Wiki (Confluence)** \u2014 The primary source of truth for our internal architectural patterns and coding standards.\n- [ ] **\"Designing Data-Intensive Applications\" by Martin Kleppmann** \u2014 Highly recommended for understanding the backend systems that support our large-scale ML models.\n- [ ] **MLOps Engineering courses (Udemy)** \u2014 Provides the necessary framework for bridging the gap between model development and production-level deployment.\n- [ ] **DeepLearning.AI Courses (Coursera)** \u2014 To stay current with state-of-the-art techniques and refresh core concepts as needed using your annual learning budget."
+  },
+  "chat_history": [
+    {
+      "role": "user",
+      "content": "How many leave days do I have?"
+    },
+    {
+      "role": "assistant",
+      "content": "Welcome to the team! Regarding your leave balance, you are entitled to the following paid leave days per year:\n\n*   **Annual Leave:** 18 days\n*   **Sick Leave:** 12 days\n\nIf you have specific questions about how to track or apply for these days, please feel free to reach out to our HR Representative, Onboarding Specialist.\n\n_Source: Company HR Policies_"
+    }
+  ],
+  "progress": {
+    "58b2bedf59": false,
+    "42812d725d": false,
+    "d7793013aa": false,
+    "adaff9f7c5": false,
+    "f982ee9c0c": false,
+    "48137d45b5": false,
+    "11c36cf824": false,
+    "f29547106e": false,
+    "d9aa733d88": false,
+    "dce45243d6": false,
+    "624c066341": false,
+    "842e18e436": false,
+    "fbf5f1b010": false,
+    "ea7922dfa6": false,
+    "75e921c388": false,
+    "74a5a4d813": false,
+    "cdac5544eb": false,
+    "6c93b95afe": false,
+    "b079752902": false,
+    "300b670713": false
+  },
+  "handbook": {
+    "filename": "",
+    "text": "",
+    "uploaded": false
+  }
+}

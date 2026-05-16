@@ -1,0 +1,63 @@
+[project]
+name = "on-board-ai-agent"
+version = "0.1.0"
+description = "Multi-agent employee-onboarding assistant powered by Gemini with a Streamlit UI."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Karan Naik" },
+]
+dependencies = [
+    "google-genai",
+    "python-dotenv",
+    "streamlit",
+    "PyPDF2",
+    "fpdf2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "pre-commit",
+]
+
+# ---------------------------------------------------------------------------
+# Ruff — linter + formatter configuration.
+# Run with: ruff check .   (or `ruff format .` to apply formatting)
+# Docs: https://docs.astral.sh/ruff/
+# ---------------------------------------------------------------------------
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = [
+    ".venv",
+    "venv",
+    "data/sessions",
+    "data/personas",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # Pyflakes
+    "I",    # isort
+    "B",    # flake8-bugbear
+    "UP",   # pyupgrade
+    "C4",   # flake8-comprehensions
+    "SIM",  # flake8-simplify
+]
+ignore = [
+    "E501",  # line-too-long — let the formatter decide
+    "B008",  # function calls in argument defaults (Streamlit-style is fine)
+    "SIM108", # ternary over if/else — readability is subjective
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]   # unused imports in __init__ are intentional re-exports
+"ui/styles.py" = ["E501"]  # CSS strings legitimately exceed 100 chars
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"

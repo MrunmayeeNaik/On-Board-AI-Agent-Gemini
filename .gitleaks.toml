@@ -1,0 +1,25 @@
+# Gitleaks configuration for On-Board AI Agent.
+# Extends the default rule set (https://github.com/gitleaks/gitleaks/blob/master/config/gitleaks.toml)
+# and adds project-specific allowlist entries for documented placeholders.
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Project-wide allowlist for known false positives"
+
+# Allowlist paths that contain only documentation/examples — not real secrets.
+paths = [
+    '''(.*?)\.lock''',
+    '''README\.md''',
+    '''CLAUDE\.md''',
+    '''data/sessions/.*\.json''',
+    '''data/personas/.*\.json''',
+]
+
+# Regex patterns that should never trigger a leak even if matched by a rule.
+regexes = [
+    '''your_key_here''',
+    '''GEMINI_API_KEY=<your key>''',
+    '''GEMINI_API_KEY=your_key_here''',
+]
