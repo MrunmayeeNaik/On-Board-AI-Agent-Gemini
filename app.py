@@ -101,6 +101,7 @@ def _on_session_resume(session: dict) -> None:
     """
     st.session_state["session"] = session
     st.session_state["chat_display"] = list(session.get("chat_history", []))
+    st.session_state["session_resumed"] = True
 
 
 def main() -> None:
@@ -141,6 +142,15 @@ def main() -> None:
         session["progress"] = live_progress
 
     render_sidebar(on_persona_pick=_on_persona_pick, on_session_resume=_on_session_resume)
+
+    if session and st.session_state.get("session_resumed"):
+        back_col, _ = st.columns([1, 5])
+        with back_col:
+            if st.button("← Back to home", use_container_width=True):
+                st.session_state["session"] = None
+                st.session_state["chat_display"] = []
+                st.session_state["session_resumed"] = False
+                st.rerun()
 
     if session:
         profile = session["profile"]
@@ -202,6 +212,7 @@ def main() -> None:
                         )
                     st.session_state["session"] = new_session
                     st.session_state["chat_display"] = []
+                    st.session_state["session_resumed"] = False
                     st.success(
                         f"Onboarding plan ready for {name}. Open the Learning Path and HR Buddy tabs."
                     )

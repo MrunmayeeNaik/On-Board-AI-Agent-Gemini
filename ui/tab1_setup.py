@@ -58,10 +58,12 @@ def render_tab1() -> tuple[str, str, str, str, str, bool]:
 
     st.divider()
 
-    generate = st.button(
-        "🚀 Generate Onboarding Plan",
-        type="primary",
-        use_container_width=True,
-    )
+    btn_left, btn_center, btn_right = st.columns([2, 3, 2])
+    with btn_center:
+        generate = st.button(
+            "🚀 Generate Onboarding Plan",
+            type="primary",
+            use_container_width=True,
+        )
 
     return name, role, department, handbook_text, handbook_filename, generate
