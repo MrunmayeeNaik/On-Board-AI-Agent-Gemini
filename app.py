@@ -172,32 +172,40 @@ def main() -> None:
     tab1, tab2, tab3 = st.tabs(["1. Setup", "2. Learning Path", "3. HR Buddy"])
 
     with tab1:
-        name, role, department, handbook_text, handbook_filename, generate = render_tab1()
-        if generate:
-            if not name or not role:
-                st.error("Please enter both a name and a role before generating.")
-            else:
-                with st.spinner("Provisioning tools and building learning path..."):
-                    new_session = run_intake(
-                        name=name,
-                        role=role,
-                        department=department,
-                        handbook_text=handbook_text,
-                        handbook_filename=handbook_filename,
-                    )
-                st.session_state["session"] = new_session
-                st.session_state["chat_display"] = []
-                st.success(
-                    f"Onboarding plan ready for {name}. Open the Learning Path and HR Buddy tabs."
-                )
-                st.rerun()
-
         if _has_session():
+            profile = st.session_state["session"]["profile"]
+            st.markdown("<div class='section-eyebrow'>Step 1 of 3</div>", unsafe_allow_html=True)
+            st.header("🔧 Employee Setup")
+            st.caption(
+                f"Showing the saved onboarding plan for **{profile['name']}** "
+                f"({profile['role']} · {profile['department']}). "
+                "Use **Reset session** in the sidebar to start a new plan."
+            )
             st.divider()
             st.subheader("📋 Provisioning Summary")
             st.markdown(
                 strip_task_syntax(st.session_state["session"]["agent1_output"]["summary_md"])
             )
+        else:
+            name, role, department, handbook_text, handbook_filename, generate = render_tab1()
+            if generate:
+                if not name or not role:
+                    st.error("Please enter both a name and a role before generating.")
+                else:
+                    with st.spinner("Provisioning tools and building learning path..."):
+                        new_session = run_intake(
+                            name=name,
+                            role=role,
+                            department=department,
+                            handbook_text=handbook_text,
+                            handbook_filename=handbook_filename,
+                        )
+                    st.session_state["session"] = new_session
+                    st.session_state["chat_display"] = []
+                    st.success(
+                        f"Onboarding plan ready for {name}. Open the Learning Path and HR Buddy tabs."
+                    )
+                    st.rerun()
 
     with tab2:
         if _has_session():
